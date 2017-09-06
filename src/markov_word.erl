@@ -12,5 +12,13 @@
 add_word_list(Words, Word) ->
   [Word | Words].
 
+pick_next_word(Words) ->
+  pick_random(Words).
+
+pick_random(List) ->
+  Length = length(List),
+  Index = random:uniform(Length),
+  lists:nth(Index,List).
+
 %% API
 -export([]).
