@@ -9,5 +9,8 @@
 -module(markov_word).
 -author("amir").
 
+add_word_list(Words, Word) ->
+  [Word | Words].
+
 %% API
 -export([]).
